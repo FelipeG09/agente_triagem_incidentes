@@ -1,0 +1,90 @@
+======================================================================
+  RELATÓRIO FINAL — AGENTE INTELIGENTE DE TRIAGEM DE INCIDENTES
+  Data e Hora: 06/06/2026 13:45:43
+======================================================================
+
+1. RESUMO DO DATASET
+----------------------------------------
+   Total de amostras: 1000
+   Divisão treino/teste: 80% / 19%
+
+   Distribuição no conjunto de TREINO:
+     Ignorar: 518 amostras (64.8%)
+     Responder: 204 amostras (25.5%)
+     Escalar: 78 amostras (9.8%)
+
+   Distribuição no conjunto de TESTE:
+     Ignorar: 132 amostras (66.0%)
+     Responder: 46 amostras (23.0%)
+     Escalar: 22 amostras (11.0%)
+
+2. ARQUITETURA DA RNA
+----------------------------------------
+   Camada de Entrada: 8 neurônios (features)
+   Camada Oculta: 12 neurônios (ativação: tanh)
+   Camada de Saída: 3 neurônios (ativação: softmax)
+   Total de parâmetros: 147
+
+3. CONFIGURAÇÃO DO ALGORITMO GENÉTICO
+----------------------------------------
+   Tamanho da população: 100
+   Número de gerações: 150
+   Taxa de mutação: 0.08
+   Força de mutação: 0.2
+   Taxa de crossover: 0.75
+   Tamanho do torneio: 5
+   Elitismo (top N): 5
+   Penalidade crítica: 0.15
+
+4. RESULTADOS DA EVOLUÇÃO
+----------------------------------------
+   Melhor fitness encontrado: 0.7768
+   Geração do melhor resultado: 150/150
+   Fitness inicial (geração 1): 0.3244
+   Fitness final (última geração): 0.7768
+   Tempo total de execução: 26.4 segundos
+
+5. MÉTRICAS DE AVALIAÇÃO NO CONJUNTO DE TESTE
+----------------------------------------
+   Acurácia: 0.7400 (74.0%)
+   F1-Score Ponderado: 0.7044
+
+   Relatório de Classificação:
+              precision    recall  f1-score   support
+
+     ignorar       0.86      0.92      0.89       132
+   responder       0.45      0.59      0.51        46
+     escalar       0.00      0.00      0.00        22
+
+    accuracy                           0.74       200
+   macro avg       0.44      0.50      0.47       200
+weighted avg       0.67      0.74      0.70       200
+
+
+6. MATRIZ DE CONFUSÃO
+----------------------------------------
+   (Linhas = real, Colunas = predito)
+
+           ignorar  responder   escalar
+          ------------------------------
+ ignorar |     121        11         0
+responder |      19        27         0
+ escalar |       0        22         0
+
+7. EXEMPLOS DE PREDIÇÃO
+----------------------------------------
+   Exemplo 1: Servidor de produção fora do ar às 3h da madrugada (possível ataque)
+     Features: ['0.95', '0.15', '1.00', '0.90', '0.80', '0.70', '0.80', '0.95']
+     Decisão: Responder (confiança: 99.7%)
+
+   Exemplo 2: Impressora do escritório não está imprimindo (dia útil)
+     Features: ['0.10', '0.50', '0.10', '0.00', '0.10', '0.10', '0.00', '0.05']
+     Decisão: Ignorar (confiança: 93.9%)
+
+   Exemplo 3: Lentidão no sistema de homologação durante horário comercial
+     Features: ['0.40', '0.55', '0.50', '0.00', '0.50', '0.30', '0.40', '0.40']
+     Decisão: Responder (confiança: 65.4%)
+
+======================================================================
+  FIM DO RELATÓRIO
+======================================================================
