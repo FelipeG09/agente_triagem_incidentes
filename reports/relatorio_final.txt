@@ -1,6 +1,6 @@
 ======================================================================
   RELATÓRIO FINAL — AGENTE INTELIGENTE DE TRIAGEM DE INCIDENTES
-  Data e Hora: 06/06/2026 13:45:43
+  Data e Hora: 06/06/2026 20:29:37
 ======================================================================
 
 1. RESUMO DO DATASET
@@ -42,7 +42,7 @@
    Geração do melhor resultado: 150/150
    Fitness inicial (geração 1): 0.3244
    Fitness final (última geração): 0.7768
-   Tempo total de execução: 26.4 segundos
+   Tempo total de execução: 48.2 segundos
 
 5. MÉTRICAS DE AVALIAÇÃO NO CONJUNTO DE TESTE
 ----------------------------------------

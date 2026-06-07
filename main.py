@@ -24,10 +24,10 @@ from src.agent.triage_agent import TriageAgent
 
 BANNER = """
 ╔══════════════════════════════════════════════════════════════════╗
-║     AGENTE INTELIGENTE DE TRIAGEM DE INCIDENTES DE TI          ║
+║     AGENTE INTELIGENTE DE TRIAGEM DE INCIDENTES DE TI            ║
 ║                                                                  ║
-║  Paradigma Conexionista (RNA) + Paradigma Evolucionário (AG)   ║
-║  Classificação automática de tickets em 3 categorias           ║
+║  Paradigma Conexionista (RNA) + Paradigma Evolucionário (AG)     ║
+║  Classificação automática de tickets em 3 categorias             ║
 ╚══════════════════════════════════════════════════════════════════╝
 """
 
